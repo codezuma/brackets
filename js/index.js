@@ -67,8 +67,18 @@ class codeTab {
         currentTab.code = document.getElementById('code').innerHTML;
         tabsArray.forEach((ele) => { ele.state = false });
         this.state = true;
-        document.getElementById('code').innerHTML = this.code ;
+        document.getElementById('code').innerHTML = this.code;
+
+        const nonActiveTabs = tabsArray.filter((ele)=>{return ele.state ===false})
+        nonActiveTabs.forEach((ele)=>{
+          ele.tab_switch.style.background = 'var(--light_primary_color)';
+          ele.tab_switch.style.opacity = '0.8';
+        });
+
+          this.tab_switch.style.background = 'var(--primary_color)';
+          this.tab_switch.style.opacity = '1';
     }
+
 }
 
 

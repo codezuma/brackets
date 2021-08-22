@@ -6,6 +6,7 @@
 :root{
     --background_color : #060606;
     --primary_color : #1D1E22;
+    --light_primary_color:#1d1e2281;
     --partition_color :#444857;
     --partition_color_hover :#535769;
     --font_color:#f6f6f6;
@@ -67,6 +68,7 @@ button{
     margin-right: 10px;
     border-radius: 5px;
     padding: 0 1rem;
+    transition: .3s ease-in-out;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     background-color:var(--primary_color);
