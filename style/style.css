@@ -39,17 +39,22 @@ button{
     display: flex;
 
 }
-.code_wrap,.output_section{
+.code_wrap,.output_wrap{
     width: 50%;
     height: 100%;
     background-color: var(--primary_color);
 }
-.code_wrap>header{
+.code_wrap>header,.output_wrap>header{
     justify-content: left;
     padding: 0 2rem;
     padding-top: 1rem;
+    color: var(--font_color);
     height: 50px;
     background-color: var(--background_color);
+}
+.output_wrap>header{
+    justify-self: center;
+    
 }
 .tab_button{
     width: 200px;
@@ -102,6 +107,20 @@ button{
     overflow: scroll;
     caret-color: var(--secondary_font_color);
 }
-.red_font_color{
-    color: rgb(207, 93, 0);
+
+@media only screen and (max-width:768px) {
+
+.app_wrap section{
+   flex-direction: column;
+}
+.code_wrap,.output_wrap{
+    width: 100%;
+    height: 50%;
+    max-height: 800px;
+}
+.code_wrap{
+    border: none;
+    border-bottom: 10px solid var(--background_color);
+}
+
 }
