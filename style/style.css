@@ -50,19 +50,27 @@ button{
     padding-top: 1rem;
     color: var(--font_color);
     height: 50px;
+    align-items: center;
     background-color: var(--background_color);
+}
+.code_wrap>header{
+    overflow-x: auto;
+    height: 80px;
+    align-items: flex-end;
 }
 .output_wrap>header{
     justify-self: center;
-    
 }
 .tab_button{
     width: 200px;
     height: 40px;
+    margin-right: 10px;
     border-radius: 5px;
+    padding: 0 1rem;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     background-color:var(--primary_color);
+    cursor: pointer;
 }
 .lang_logo{
     width: 70px;
@@ -99,13 +107,28 @@ button{
 .code_section{
     user-select:var(--background_color);
     padding:2rem 1rem;
-    height: calc(100% - 50px);
+    height: calc(100% - 80px);
     outline: none;
     font-size: 1rem;
     color:var(--secondary_font_color);
     letter-spacing: 1px;
     overflow: scroll;
     caret-color: var(--secondary_font_color);
+}
+.add_tab_button{
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+}
+.add_tab_button svg{
+    border-radius: 50%;
+    transition: .3s;
+}
+.add_tab_button:hover  svg{
+    border-radius: 50%;
+    background:#f6f6f623;
+
+
 }
 
 @media only screen and (max-width:768px) {
@@ -122,5 +145,4 @@ button{
     border: none;
     border-bottom: 10px solid var(--background_color);
 }
-
 }
