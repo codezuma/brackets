@@ -112,7 +112,6 @@ class codeTab {
 }
 // and exploiting the fact that IDs pollute the window namespace:
 document.getElementById('savebtn').onclick = function () {
-    alert();
     const txtString = document.getElementById('code').innerText || document.getElementById('code').textContent;
     downloadFile(txtString);
 }
