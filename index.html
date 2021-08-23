@@ -12,7 +12,7 @@
 <body>
     <div class="app_wrap">
         <header class="flex">
-            <div class="logo_section"></div>
+            <div class="logo_section">logo</div>
             <div class="button_section flex">
                 <button class='nav_buttons flex'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -23,7 +23,7 @@
                     </svg>
                     <span>Run</span>
                 </button>
-                <button class='nav_buttons flex'>
+                <button class='nav_buttons flex' id="savebtn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-download-cloud">
@@ -38,14 +38,19 @@
             <div class="code_wrap">
                 <header class="flex" id='tab_container'>
                     <div class="add_tab_button flex" id="add_tab_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-plus">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
                     </div>
                 </header>
                 <div class="code_section" spellcheck="false" id="code" contenteditable></div>
             </div>
             <div class="output_wrap">
                 <header class="flex">
-                   <h1>OUTPUT</h1>
+                    <h1>OUTPUT</h1>
                 </header>
             </div>
         </section>
