@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: .3s;
 }
 :root{
     --background_color : #060606;
@@ -12,21 +13,54 @@
     --font_color:#f6f6f6;
     --secondary_font_color:#AAAEBC;
     font-family: Consolas;
-
+}
+a{
+    text-decoration: none;
+    color: var(--font_color);
+}
+a:hover{
+    color: var(--secondary_font_color);
+}
+body{
+    overflow-x:hidden;
 }
 button{
     cursor: pointer;
+}
+.app_header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 1;
+    background-color: var(--primary_color);
 }
 .flex{
     display: flex;
     align-items: center;
 }
 .app_wrap{
+    padding-top: 80px;
     width: 100vw;
     height: 100vh;
     background-color: var(--background_color);
 }
-
+.app_header_section{
+    flex-grow: 1;
+    padding: 0 5%;
+}
+.sm_section_header{
+    justify-content: flex-end;
+}
+.toturials_section_header a,.sm_section_header a{
+    margin-left: 1rem;
+}
+.sm_section_header_icon{
+    stroke: var(--font_color);
+}
+.sm_section_header a:hover .sm_section_header_icon{
+    stroke: var(--secondary_font_color);
+    transform: scale(1.1);
+}
 .app_wrap>header{
     height: 80px;
     justify-content: space-between;
@@ -166,8 +200,51 @@ button{
 .add_tab_button:hover  svg{
     border-radius: 50%;
     background:#f6f6f623;
-
-
+}
+footer{
+    padding:2rem 4rem;
+    background-color: var(--background_color);
+    height:  300px;
+    color: var(--font_color);
+}
+.footer_section{
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-grow: 1;
+ 
+}
+.website_logo{
+    width: 100px;
+    height: 100px;
+}
+.website_name{
+    color: var(--font_color);
+    font-weight: 500;
+    text-align: center;
+}
+.website_tagline{
+    font-weight: 600;
+    text-align: center;
+    color: var(--secondary_font_color);
+}
+.recent_post_head{
+    font-weight: 600;
+}
+.footer_section_aboutus{
+    padding-left: 10%;
+}
+.footer_section_aboutus> span{
+    width: 100%;
+    text-align: left;
+}
+.footer_section_post> a{
+    color: var(--secondary_font_color);
+    text-decoration: none;
+}
+.footer_section_post> a:hover{
+    color: var(--font_color);
 }
 
 @media only screen and (max-width:768px) {
@@ -184,8 +261,18 @@ button{
     border: none;
     resize: none;
     resize: vertical;
-
     border-bottom: 10px solid var(--background_color);
+}
+footer{
+    height: auto;
+    flex-direction: column;
+}
+.footer_section{
+    width: 100%;
+    height: 200px;
+}
+.footer_section_aboutus> span{
+    text-align: center;
 }
 }
 @media only screen and (max-width:450px) {
