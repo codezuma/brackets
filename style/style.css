@@ -38,11 +38,13 @@ button{
 .app_wrap>section{
     height: calc(100% - 80px);
     display: flex;
-
+    width: 100%;
+    overflow: hidden;
 }
+
 .code_wrap,.output_wrap{
-    width: 50%;
     height: 100%;
+    flex-grow: 1;
     background-color: var(--primary_color);
 }
 .code_wrap>header,.output_wrap>header{
@@ -101,7 +103,20 @@ button{
     background-color: #f6f6f623;
 }
 .code_wrap{
-    border-right: 20px solid var(--background_color);
+    overflow-y: scroll;
+    resize: horizontal;
+    margin-right: 20px;
+}
+.code_wrap::-webkit-scrollbar{
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--secondary_font_color);
+}
+.code_wrap::-webkit-scrollbar-corner{
+    appearance: none;
+    -webkit-appearance: none;
+    background:var(--primary_color);
+    outline: none;
 }
 .lang_name{
     width: 100px;
@@ -136,7 +151,7 @@ button{
     font-size: 1rem;
     color:var(--secondary_font_color);
     letter-spacing: 1px;
-    overflow: scroll;
+    overflow: auto;
     caret-color: var(--secondary_font_color);
 }
 .add_tab_button{
@@ -167,6 +182,9 @@ button{
 }
 .code_wrap{
     border: none;
+    resize: none;
+    resize: vertical;
+
     border-bottom: 10px solid var(--background_color);
 }
 }

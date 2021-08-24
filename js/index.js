@@ -122,6 +122,5 @@ function downloadFile(txtstrin) {
     saveElement.download = 'index.php';
     document.body.appendChild(saveElement);
     saveElement.click();
-    document.body.removeChild(saveElement);
+    document.body.removeChild(saveElement); 
 }
-
