@@ -63,8 +63,6 @@ class codeTab {
         newTab.activeTab();
     }
     activeTab() {
-        console.log('swtich tab called');
-        console.log(this);
         const currentTab = tabsArray.find((ele) => { return ele.state == true });
         currentTab.code = document.getElementById('code').innerHTML;
         tabsArray.forEach((ele) => { ele.state = false });
@@ -123,4 +121,19 @@ function downloadFile(txtstrin) {
     document.body.appendChild(saveElement);
     saveElement.click();
     document.body.removeChild(saveElement); 
+}
+
+//opening first tab
+document.getElementById('add_tab_button').click();
+
+window.onscroll = function (e) {
+    var header = document.getElementsByClassName('app_header')[0];
+    if (window.scrollY !== 0 ){
+         header.style.background = " var(--background_color)";
+         header.style.boxShadow = ' 0px 8px 18px -6px rgba(82, 82, 83, 0.12), 0px 12px 42px -4px rgba(59, 60, 61, 0.12)';
+        }
+    else{
+        header.style.background = "transparent";
+        header.style.boxShadow = ' none';
+    }
 }
