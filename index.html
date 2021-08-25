@@ -10,20 +10,75 @@
 </head>
 
 <body>
+    <aside id="side_menu_bar" class="aside_close">
+        <div class="mobile_nav_bar flex">
+            <div class="mobile_menu_section flex">
+                    <span class ="dd_head">Recent Post</span>
+                    <a class="recent_post" href="">post1 </a>
+                    <a class="recent_post" href="">post2</a>
+                    <a class="recent_post" href="">post3</a>
+                    <a class="recent_post" href="">post4</a>
+            </div>
+            <div class="mobile_menu_section flex">
+                    <span class ="dd_head">The Company</span>
+                    <a class="recent_post" href="">link1 </a>
+                    <a class="recent_post" href="">link2</a>
+                    <a class="recent_post" href="">link3</a>
+                    <a class="recent_post" href="">link4</a>
+            </div>
+            <div class="mobile_menu_section">
+                <div class="mobile_sm_section">
+                    <a href=""><svg class="sm_section_header_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href=""><svg class="sm_section_header_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                </div>   
+            </div>
+        </div>
+    </aside>
     <header class="app_header flex">
-        <div class="app_header_section flex "><img class="headerimage" src="" alt=""></div>
+        <div class="app_header_section flex ">
+            <img class="headerimage" src="" alt="">
+            <div class="website_info">
+                <div class="website_name">website_name</div>
+                <div class="website_tagline">website_tagline</div>
+            </div>
+        </div>
         <div class="app_header_section flex toturials_section_header">
-            <a href="">totorials_link</a>
-            <a href="">totorials_link</a>
+            <div class="dropdown_section">
+                <div class="dropdown_head flex"> <span>Recent Post</span>&nbsp; <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                <div class="dropdown_menu flex">
+                    <a href="">post1 </a>
+                    <a href="">post2</a>
+                    <a href="">post3</a>
+                    <a href="">post4</a>
+                </div>
+            </div>
+            <div class="dropdown_section">
+                <div class="dropdown_head flex"> <span>The Company</span>&nbsp;  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                <div class="dropdown_menu">
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                </div>
+            </div>
         </div>
         <div class="app_header_section flex  sm_section_header">
             <a href=""><svg class="sm_section_header_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
             <a href=""><svg class="sm_section_header_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
         </div>
+        <button class="menu" id="menu_icon" style="z-index: 2;" aria-label="Main Menu">
+            <svg width="50" height="50" viewBox="0 0 100 100">
+                <path class="line line1" stroke="white"
+                    d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3"
+                    d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+        </button>
     </header>
     <div class="app_wrap">
         <header class="flex">
-            <div class="logo_section">logo</div>
+            <div class="logo_section"></div>
             <div class="button_section flex">
                 <button class='nav_buttons flex'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"

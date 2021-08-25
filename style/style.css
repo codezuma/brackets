@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     transition: .3s;
+
 }
 :root{
     --background_color : #060606;
@@ -12,7 +13,146 @@
     --partition_color_hover :#535769;
     --font_color:#f6f6f6;
     --secondary_font_color:#AAAEBC;
-    font-family: Consolas;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f6f6f6;
+}
+
+
+/* nav bar menu icon code */
+
+
+.menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    padding: 0;
+    z-index: 5;
+}
+
+.line {
+    fill: none;
+    stroke: white;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+}
+
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+}
+
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+/*   sidebar for small devices */
+aside {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 100px 20px 20px 0;
+    background-color: var(--background_color);
+}
+.mobile_nav_bar{
+    height: 100%;
+    justify-content: space-between;
+
+}
+.mobile_menu_section{
+    flex-direction: column;
+    margin-top: 20px;
+}
+.mobile_menu_section a{
+    margin-top: 5px;
+}
+.dd_head{
+    font-size: 1.4rem;
+}
+.aside_open {
+    animation: show_menu .5s 1 ease-out;
+    animation-fill-mode: forwards;
+}
+
+.aside_close {
+    animation: hide_menu .5s 1 ease-out;
+    animation-fill-mode: forwards;
+}
+
+/* animation for side_box */
+@keyframes show_menu {
+    from {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        opacity: 0;
+    }
+
+    to {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        opacity: 1;
+
+    }
+}
+
+@keyframes hide_menu {
+    from {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    to {
+        opacity: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: none;
+    }
+}
+
+.mobile_nav_bar {
+    flex-direction: column;
+    align-items: center;
+    justify-items: right;
+}
+
+.mobile_nav_bar>.navitem {
+    font-size: 1.5rem;
+    margin-top: 3rem;
 }
 
 a{
@@ -33,7 +173,7 @@ button{
     width: 100%;
     height: 80px;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     background-color: var(--background_color);
 }
 .headerimage{
@@ -57,7 +197,7 @@ button{
 .sm_section_header{
     justify-content: flex-end;
 }
-.toturials_section_header a,.sm_section_header a{
+.toturials_section_header .dropdown_section ,.sm_section_header a{
     margin-left: 1rem;
 }
 .sm_section_header_icon{
@@ -81,6 +221,39 @@ button{
     display: flex;
     width: 100%;
     overflow: hidden;
+}
+.dropdown_section{
+    position: relative;
+    cursor: pointer; 
+}
+.toturials_section_header{
+    padding: 0 10%;
+    justify-content: space-between;
+}
+.dropdown_menu{
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    display: none;
+    width: 200px;
+    align-items:flex-start;
+    flex-direction: column;
+    top: 30px;
+    padding: 1rem 1.5rem;
+    border-radius:1px;
+    background-color: var(--background_color);
+    transition: none;
+}
+.dropdown_menu a{
+    margin-top: 5px;
+    text-align: left;
+}
+
+.dropdown_section:hover     .dropdown_menu{
+    height: auto;
+    display: flex;
+    border: 2px solid var(--primary_color);
+    opacity: 1;
 }
 .logo_section{
     font-size: 2rem;
@@ -150,6 +323,7 @@ button{
     overflow-y: scroll;
     resize: horizontal;
     margin-right: 20px;
+    font-family: Consolas;
 }
 .code_wrap::-webkit-scrollbar{
     appearance: none;
@@ -257,8 +431,21 @@ footer{
     color: var(--font_color);
 }
 
+@media only screen and (max-width:900px) {
+    .toturials_section_header{
+        padding: 0 2%;
+    }
+}
 @media only screen and (max-width:768px) {
-
+.menu{
+    display: block;
+}
+.toturials_section_header{
+    display: none;
+}
+.sm_section_header{
+    display: none;
+}
 .app_wrap section{
    flex-direction: column;
 }
